@@ -30,6 +30,10 @@ app.get('/meteo/:text', function (req, res) {
     });
 })
 
+app.get('/form.html', function (req, res) {
+    res.sendfile('./form.html')
+})
+
 app.listen(port, function () {
     console.log('Port: ', port)
 })
