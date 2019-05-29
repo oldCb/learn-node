@@ -1,11 +1,21 @@
-<form>
-    <div>
-        <label for="name">Nom:</label>
-            <input type="text">
-    </div>
-    <div>
-        <label for="lastName">Prenom:</label>
-            <input type="text">
-    </div>
-    <input type="button" value="Envoyer">
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+        <form method="post" action="/form">
+            <div>
+                <label for="name">Nom:</label>
+                    <input type="text" name="nom">
+            </div>
+            <div>
+                <label for="lastName">Prenom:</label>
+                    <input type="text" name="prenom">
+            </div>
+            <input type="submit" value="Envoyer">
+        </form>
+  </body>
+</html>
+

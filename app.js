@@ -1,8 +1,11 @@
 const express = require('express')
+const bodyParser = require("body-parser")
 const suggestions = require('google-suggestions')
 const weather = require('weather-js')
 const app = express()
 const port = 3000
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
     res.send('hello word')
@@ -30,9 +33,15 @@ app.get('/meteo/:text', function (req, res) {
     });
 })
 
-app.get('/form.html', function (req, res) {
+app.get('/form', function (req, res) {
     res.sendfile('./form.html')
 })
+
+app.post('/form', function (req, res) {
+    console.log('nom: ' + req.body.nom)
+    console.log('prenom: ' + req.body.prenom)
+})
+
 
 app.listen(port, function () {
     console.log('Port: ', port)
