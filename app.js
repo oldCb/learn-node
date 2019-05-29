@@ -27,9 +27,9 @@ app.get('/meteo/:text', function (req, res) {
         const m = JSON.stringify(result, null, 2)
         console.log(m);
         res.send(m)
-      });
+    });
 })
 
 app.listen(port, function () {
-    console.log('Exemple app listening on port ', port)
+    console.log('Port: ', port)
 })
